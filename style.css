@@ -1,0 +1,138 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(244, 237, 255) !important;
+    height: 100vh;
+}
+
+.nav-bar {
+    background-color: rgb(23, 60, 232);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+}
+
+.nav-bar a {
+    color: white;
+    font-size: 28px;
+    font-family: Rubik;
+    text-decoration: none;
+    width: 150px;
+    text-align: center;
+    border-left: 10px solid rgba(255, 255, 255, 0);
+}
+
+.nav-bar :hover {
+    border-left: 10px solid white;
+}
+
+.parrent-container {
+    display: flex;
+    height: 600px;
+    width: 850px;
+}
+
+.questions-parrent-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(247, 247, 247);
+    width: 700px;
+}
+
+.letter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    background-color: rgb(214, 214, 214);
+    margin-left: 5px;
+    font-family: rubik;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo {
+    height: 90px;
+    position: absolute;
+    top: 100px;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 15px;
+    background-color: rgb(174, 174, 174) !important;
+}
+
+.padding-bottom-15 {
+    padding-bottom: 15px;
+}
+
+.wrong-answer-btn {
+    background-color: rgba(223, 51, 51, 0.695) !important;
+}
+
+.wrong-answer-letter {
+    background-color: rgba(213, 0, 0, 0.879);
+    
+}
+
+.wrong-answer-letter a  {
+    color: rgb(255, 255, 255) !important;
+}
+
+.right-answer-btn {
+    background-color: rgba(58, 206, 108, 0.693) !important;
+}
+
+.right-answer-letter {
+    background: rgba(23, 170, 72, 0.9);
+}
+
+.answer-button {
+    width: 450px;
+    height: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: white;
+}
+
+.btn-next {
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 75px;
+    left: 530px;
+    background-color: rgb(219, 223, 244);
+    border: none !important;
+    text-align: center;
+    font-family: rubik;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.btn-previous {
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 75px;
+    right: 380px;
+    background-color: rgb(219, 223, 244);
+    border: none !important;
+    text-align: center;
+    font-family: rubik;
+    font-weight: bold;
+    font-size: 30px;
+}
