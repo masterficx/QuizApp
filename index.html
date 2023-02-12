@@ -23,7 +23,7 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload="init()">
     <div class="progress-bar">
 
     </div>
@@ -39,20 +39,23 @@
 
         </div>
         <div class="questions-parrent-container">
-            <button class="answer-button" id="option_A">
-                <div class="letter">A</div>
+            <span id="questiontext" class="question"></span>
+            <button class="answer-button" onclick="answer('answer_1')">
+                <div class="letter">A</div> <span id="answer_1" class="answer"></span>
             </button>
-            <button class="answer-button"id="option_B">
-                <div class="letter">B</div>
+            <button class="answer-button" onclick="answer('answer_2')">
+                <div class="letter">B</div> <span id="answer_2" class="answer"></span>
             </button>
-            <button class="answer-button"id="option_C">
-                <div class="letter">C</div>
+            <button class="answer-button" onclick="answer('answer_3')">
+                <div class="letter">C</div> <span id="answer_3" class="answer"></span>
             </button>
-            <button class="answer-button"id="option_D">
-                <div class="letter">D</div>
-            </button>
+            <button class="answer-button" onclick="answer('answer_4')">
+                <div class="letter">D</div> <span id="answer_4" class="answer"></span>
+            </button> 
 
             <button class="btn-next"><</button>
+            <span class="question-number">Question <b>1</b> from <b id="all-questions"></b></span>
+
             <button class="btn-previous">></button>
 
         </div>
