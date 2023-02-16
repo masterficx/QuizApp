@@ -75,6 +75,7 @@ function showQuestion() {
     document.getElementById('answer_2').innerHTML = question['answer_2'];
     document.getElementById('answer_3').innerHTML = question['answer_3'];
     document.getElementById('answer_4').innerHTML = question['answer_4'];
+    document.getElementById('current-question').innerHTML = `${currentQuestion + 1}`
 
 }
 
@@ -83,10 +84,27 @@ function answer(selection) {
     let question = questions[currentQuestion];
     let selectedAnswer = selection.slice(-1);
     let rightAnswer = question['correct_answer'];
+    let idOfRightAnswer = `answer_${question['correct_answer']}`;
     if (selectedAnswer == rightAnswer) {
         document.getElementById(selection).parentNode.classList.add('bg-success');
     } else {
         document.getElementById(selection).parentNode.classList.add('bg-danger');
-
+        document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-success');
     }
+    document.getElementById('btn-next').disabled = false;
+}
+
+function nextQuestion(){
+
+    currentQuestion++;
+    showQuestion();
+    document.getElementById('btn-next').disabled = true;
+    document.getElementById('answer_2').parentNode.classList.remove('bg-success');
+    document.getElementById('answer_3').parentNode.classList.remove('bg-success');
+    document.getElementById('answer_1').parentNode.classList.remove('bg-success');
+    document.getElementById('answer_4').parentNode.classList.remove('bg-success');
+    document.getElementById('answer_2').parentNode.classList.remove('bg-danger');
+    document.getElementById('answer_3').parentNode.classList.remove('bg-danger');
+    document.getElementById('answer_1').parentNode.classList.remove('bg-danger');
+    document.getElementById('answer_4').parentNode.classList.remove('bg-danger');
 }

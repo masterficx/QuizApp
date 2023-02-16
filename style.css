@@ -107,7 +107,7 @@ body {
     background-color: rgb(238, 240, 221);
 }
 
-.btn-next {
+.btn-previous {
     height: 80px;
     width: 80px;
     border-radius: 100%;
@@ -122,12 +122,12 @@ body {
     font-size: 30px;
 }
 
-.btn-next:hover {
+.btn-previous:hover {
 
     background-color: rgb(151, 156, 241);
 }
 
-.btn-previous {
+.btn-next {
     height: 80px;
     width: 80px;
     border-radius: 100%;
@@ -142,7 +142,7 @@ body {
     font-size: 30px;
 }
 
-.btn-previous:hover {
+.btn-next:hover {
 
     background-color: rgb(151, 156, 241);
 }
