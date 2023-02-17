@@ -57,6 +57,8 @@ let questions = [
 ];
 
 let currentQuestion = 0;
+let sumOfRightAnswers = 0;
+
 
 function init() {
 
@@ -69,14 +71,27 @@ function init() {
 
 
 function showQuestion() {
-    let question = questions[currentQuestion];
-    document.getElementById('questiontext').innerHTML = question['question'];
-    document.getElementById('answer_1').innerHTML = question['answer_1'];
-    document.getElementById('answer_2').innerHTML = question['answer_2'];
-    document.getElementById('answer_3').innerHTML = question['answer_3'];
-    document.getElementById('answer_4').innerHTML = question['answer_4'];
-    document.getElementById('current-question').innerHTML = `${currentQuestion + 1}`
 
+    if (currentQuestion >= questions.length) {
+
+        document.getElementById('questions-container').style = 'display: none';
+        document.getElementById('results-parrent-container').style = '';
+        document.getElementById('total-questions').innerHTML = questions.length;
+        document.getElementById('score').innerHTML = sumOfRightAnswers;
+    } else {
+
+        let percent = (currentQuestion + 1)/ questions.length;
+        percent = Math.round(percent * 100);
+        document.getElementById('progress-bar').style = `width: ${percent}%`
+        document.getElementById('progress').innerHTML = `${percent} %`
+        let question = questions[currentQuestion];
+        document.getElementById('questiontext').innerHTML = question['question'];
+        document.getElementById('answer_1').innerHTML = question['answer_1'];
+        document.getElementById('answer_2').innerHTML = question['answer_2'];
+        document.getElementById('answer_3').innerHTML = question['answer_3'];
+        document.getElementById('answer_4').innerHTML = question['answer_4'];
+        document.getElementById('current-question').innerHTML = `${currentQuestion + 1}`
+    }
 }
 
 function answer(selection) {
@@ -86,6 +101,7 @@ function answer(selection) {
     let rightAnswer = question['correct_answer'];
     let idOfRightAnswer = `answer_${question['correct_answer']}`;
     if (selectedAnswer == rightAnswer) {
+        sumOfRightAnswers ++;
         document.getElementById(selection).parentNode.classList.add('bg-success');
     } else {
         document.getElementById(selection).parentNode.classList.add('bg-danger');
@@ -94,7 +110,7 @@ function answer(selection) {
     document.getElementById('btn-next').disabled = false;
 }
 
-function nextQuestion(){
+function nextQuestion() {
 
     currentQuestion++;
     showQuestion();
@@ -107,4 +123,12 @@ function nextQuestion(){
     document.getElementById('answer_3').parentNode.classList.remove('bg-danger');
     document.getElementById('answer_1').parentNode.classList.remove('bg-danger');
     document.getElementById('answer_4').parentNode.classList.remove('bg-danger');
+}
+function newStart(){
+
+    document.getElementById('questions-container').style = '';
+    document.getElementById('results-parrent-container').style = 'display: none';
+    sumOfRightAnswers = 0;
+    currentQuestion = 0;
+    init();
 }

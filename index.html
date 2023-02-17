@@ -24,9 +24,9 @@
 </head>
 
 <body onload="init()">
-    <div class="progress-bar">
-
-    </div>
+    <div class="progress"  role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+        <div class="progress-bar" id="progress-bar" style="width: 25%"><b id="progress">25%</b></div>
+      </div>
 
 
     <div class="parrent-container">
@@ -38,7 +38,18 @@
             <a href="#" class="padding-bottom-15">JAVA</a>
 
         </div>
-        <div class="questions-parrent-container">
+        <div class="results-parrent-container" id="results-parrent-container" style="display: none">
+            <div class="results-container">
+
+                <img src="./img/Group 5.png" class="result-screen-logo">
+
+                <span class="result-screen-title">COMPLETE <br> HTML QUIZ</span>
+                <div><span class="score-title">YOUR SCORE</span><span class="score"> <b id="score"></b>   / <b id="total-questions"></b></span></div>
+                <button class="share-btn">SHARE</button>
+                <button class="replay-btn" onclick="newStart()">REPLAY</button>
+            </div>
+        </div>
+        <div class="questions-parrent-container" id="questions-container">
             <span id="questiontext" class="question"></span>
             <button class="answer-button" onclick="answer('answer_1')">
                 <div class="letter">A</div> <span id="answer_1" class="answer"></span>

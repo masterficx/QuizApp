@@ -68,12 +68,10 @@ body {
     top: 50px;
 }
 
-.progress-bar {
+.progress {
     position: absolute;
     top: 0;
-    width: 100vw;
-    height: 15px;
-    background-color: rgb(174, 174, 174) !important;
+    
 }
 
 .padding-bottom-15 {
@@ -123,7 +121,6 @@ body {
 }
 
 .btn-previous:hover {
-
     background-color: rgb(151, 156, 241);
 }
 
@@ -143,7 +140,6 @@ body {
 }
 
 .btn-next:hover {
-
     background-color: rgb(151, 156, 241);
 }
 
@@ -152,7 +148,6 @@ body {
     bottom: 30px;
     font-family: rubik;
     font-size: 25px;
-
 }
 
 .question {
@@ -167,17 +162,84 @@ body {
     font-weight: 500;
     font-size: 25px;
     text-align: center;
-    
 }
 
 .answer {
     width: 380px;
     font-family: rubik;
     font-size: 24px;
-
 }
 
-.bg-danger, .bg-success {
-
+.bg-danger,
+.bg-success {
     border: 2px solid rgb(63, 63, 63);
+}
+
+.results-parrent-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(247, 247, 247);
+    width: 700px;
+}
+
+.results-container {
+    background-color: rgb(247, 213, 187);
+    width: 550px;
+    height: 550px;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result-screen-logo {
+    height: 240px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.result-screen-title {
+    font-family: rubik;
+    font-weight: bold;
+    font-size: 28px;
+    padding-bottom: 20px;
+}
+
+.score-title {
+    font-family: rubik;
+    font-weight: bold;
+    font-size: 28px;
+    padding-right: 20px;
+    
+}
+
+.score{
+    font-family: rubik;
+    font-weight: bold;
+    font-size: 28px;
+    padding-left: 20px;
+    color: rgb(23, 60, 232);
+    
+}
+.share-btn{
+    background-color: rgb(255, 78, 15);
+    width: 160px;
+    height: 40px;
+    color: white;
+    font-family: rubik;
+    font-weight: 50;
+    font-size: 25px;
+    border-radius: 8px;
+    border: none !important;
+    margin-top:20px;
+}
+.replay-btn{
+
+    font-family: rubik;
+    font-size: 25px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none !important;
+    margin-top: 10px;
+    color: rgb(255, 78, 15);
 }
